@@ -669,14 +669,25 @@
   dependencies:
     "@octokit/openapi-types" "^7.2.3"
 
-"@octokit/webhooks@7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@octokit/webhooks/-/webhooks-7.21.0.tgz#2aee3404aa311740a5f4ea37b070268752e21b02"
-  integrity sha512-Mj7Pa6JZgSjfzQfYF3Bf5KpyhzEBv4kHbj2EjCB/vMQiZCiiW30j5rS6t/d0ZN0FBrlSOuJIT+YU8IJt30VyWA==
+"@octokit/webhooks-methods@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@octokit/webhooks-methods/-/webhooks-methods-2.0.0.tgz#1108b9ea661ca6c81e4a8bfa63a09eb27d5bc2db"
+  integrity sha512-35cfQ4YWlnZnmZKmIxlGPUPLtbkF8lr/A/1Sk1eC0ddLMwQN06dOuLc+dI3YLQS+T+MoNt3DIQ0NynwgKPilig==
+
+"@octokit/webhooks-types@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@octokit/webhooks-types/-/webhooks-types-5.2.0.tgz#9d1d451f37460107409c81cab04dd473108abb02"
+  integrity sha512-OZhKy1w8/GF4GWtdiJc+o8sloWAHRueGB78FWFLZnueK7EHV9MzDVr4weJZMflJwMK4uuYLzcnJVnAoy3yB35g==
+
+"@octokit/webhooks@^9.8.4":
+  version "9.22.0"
+  resolved "https://registry.yarnpkg.com/@octokit/webhooks/-/webhooks-9.22.0.tgz#07a36a10358d39c1870758fae2b1ad3c24ca578d"
+  integrity sha512-wUd7nGfDRHG6xkz311djmq6lIB2tQ+r94SNkyv9o0bQhOsrkwH8fQCM7uVsbpkGUU2lqCYsVoa8z/UC9HJgRaw==
   dependencies:
     "@octokit/request-error" "^2.0.2"
+    "@octokit/webhooks-methods" "^2.0.0"
+    "@octokit/webhooks-types" "5.2.0"
     aggregate-error "^3.1.0"
-    debug "^4.0.0"
 
 "@probot/get-private-key@^1.1.0":
   version "1.1.0"
@@ -888,10 +899,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/ioredis@^4.17.8":
-  version "4.26.4"
-  resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.26.4.tgz#a2b1ed51ddd2c707d7eaac5017cc34a0fe51558a"
-  integrity sha512-QFbjNq7EnOGw6d1gZZt2h26OFXjx7z+eqEnbCHSrDI1OOLEgOHMKdtIajJbuCr9uO+X9kQQRe7Lz6uxqxl5XKg==
+"@types/ioredis@^4.27.1":
+  version "4.28.7"
+  resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.28.7.tgz#ee79987ef80597ba8c17cfbf9345859ff9233c2d"
+  integrity sha512-jnSGCD2/TPk02j6v6CGqaCEl0LbmLgK6jUuk/AFaSNUBV+SCHiG7E7fnwJreN6hw9GqtLAFkJs4zFbkJrz11mQ==
   dependencies:
     "@types/node" "*"
 
@@ -1677,7 +1688,7 @@ debug@2.6.9, debug@^2.2.0:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
+debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
@@ -2235,13 +2246,13 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hbs@^4.1.1:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/hbs/-/hbs-4.1.2.tgz#8d8c07b50d985b580a3d6eae9bf52393a47b9aaf"
-  integrity sha512-WfBnQbozbdiTLjJu6P6Wturgvy0FN8xtRmIjmP0ebX9OGQrt+2S6UC7xX0IebHTCS1sXe20zfTzQ7yhjrEvrfQ==
+hbs@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/hbs/-/hbs-4.2.0.tgz#10e40dcc24d5be7342df9636316896617542a32b"
+  integrity sha512-dQwHnrfWlTk5PvG9+a45GYpg0VpX47ryKF8dULVd6DtwOE6TEcYQXQ5QM6nyOx/h7v3bvEQbdn19EDAcfUAgZg==
   dependencies:
     handlebars "4.7.7"
-    walk "2.3.14"
+    walk "2.3.15"
 
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
@@ -2377,16 +2388,17 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
-ioredis@^4.19.2:
-  version "4.27.4"
-  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-4.27.4.tgz#a5361147eff9847e82b78d5d3b48cb03b6cebcba"
-  integrity sha512-1n91WZ+L1tHL4hEN9pT16s3f0+Dg82GfvyJGaD47BhEvQb63gIsmDkt/dmzDFBTYfwwlQn8TsT/QSPcjHiT3CQ==
+ioredis@^4.27.8:
+  version "4.28.3"
+  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-4.28.3.tgz#b13fce8a6a7c525ba22e666d72980a3c0ba799aa"
+  integrity sha512-9JOWVgBnuSxpIgfpjc1OeY1OLmA4t2KOWWURTDRXky+eWO0LZhI33pQNT9gYxANUXfh5p/zYephYni6GPRsksQ==
   dependencies:
     cluster-key-slot "^1.1.0"
     debug "^4.3.1"
     denque "^1.1.0"
     lodash.defaults "^4.2.0"
     lodash.flatten "^4.4.0"
+    lodash.isarguments "^3.1.0"
     p-map "^2.1.0"
     redis-commands "1.7.0"
     redis-errors "^1.2.0"
@@ -3180,6 +3192,11 @@ lodash.includes@^4.3.0:
   resolved "https://registry.yarnpkg.com/lodash.includes/-/lodash.includes-4.3.0.tgz#60bb98a87cb923c68ca1e51325483314849f553f"
   integrity sha1-YLuYqHy5I8aMoeUTJUgzFISfVT8=
 
+lodash.isarguments@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
+  integrity sha1-L1c9hcaiQon/AGY7SRwdM4/zRYo=
+
 lodash.isboolean@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/lodash.isboolean/-/lodash.isboolean-3.0.3.tgz#6c2e171db2a257cd96802fd43b01b20d5f5870f6"
@@ -3700,10 +3717,10 @@ pretty-format@^27.0.2:
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
 
-probot@^11.4.0:
-  version "11.4.0"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-11.4.0.tgz#3b36a5bd35129653c5f8c1a3b15fbac7a700c149"
-  integrity sha512-FrFL30D0gygWiDmP6z6oO5XpNMVKVdUgZJjRRf9KU9Px5Kcb6Ph9rjZ0NE2ogo9NT6bNxeoTYduczxm65TMmcw==
+probot@^12.2.1:
+  version "12.2.1"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-12.2.1.tgz#8328b3283957f094bd5f5123c56bbf4cf63d3a20"
+  integrity sha512-CpqulMQFwfkh/3J+TcizxQgXeTgIVhw8ZpYq4TU4uHoo1iSC8Xmyrfv2BHRNI1OWRQhCnpJXIWh5EzhpX24Fvw==
   dependencies:
     "@octokit/core" "^3.2.4"
     "@octokit/plugin-enterprise-compatibility" "^1.2.8"
@@ -3712,12 +3729,12 @@ probot@^11.4.0:
     "@octokit/plugin-retry" "^3.0.6"
     "@octokit/plugin-throttling" "^3.3.4"
     "@octokit/types" "^6.1.1"
-    "@octokit/webhooks" "7.21.0"
+    "@octokit/webhooks" "^9.8.4"
     "@probot/get-private-key" "^1.1.0"
     "@probot/octokit-plugin-config" "^1.0.0"
     "@probot/pino" "^2.2.0"
     "@types/express" "^4.17.9"
-    "@types/ioredis" "^4.17.8"
+    "@types/ioredis" "^4.27.1"
     "@types/pino" "^6.3.4"
     "@types/pino-http" "^5.0.6"
     "@types/update-notifier" "^5.0.0"
@@ -3727,8 +3744,8 @@ probot@^11.4.0:
     dotenv "^8.2.0"
     eventsource "^1.0.7"
     express "^4.17.1"
-    hbs "^4.1.1"
-    ioredis "^4.19.2"
+    hbs "^4.2.0"
+    ioredis "^4.27.8"
     js-yaml "^3.14.1"
     lru-cache "^6.0.0"
     octokit-auth-probot "^1.2.2"
@@ -4544,10 +4561,10 @@ w3c-xmlserializer@^2.0.0:
   dependencies:
     xml-name-validator "^3.0.0"
 
-walk@2.3.14:
-  version "2.3.14"
-  resolved "https://registry.yarnpkg.com/walk/-/walk-2.3.14.tgz#60ec8631cfd23276ae1e7363ce11d626452e1ef3"
-  integrity sha512-5skcWAUmySj6hkBdH6B6+3ddMjVQYH5Qy9QGbPmN8kVmLteXk+yVXg+yfk1nbX30EYakahLrr8iPcCxJQSCBeg==
+walk@2.3.15:
+  version "2.3.15"
+  resolved "https://registry.yarnpkg.com/walk/-/walk-2.3.15.tgz#1b4611e959d656426bc521e2da5db3acecae2424"
+  integrity sha512-4eRTBZljBfIISK1Vnt69Gvr2w/wc3U6Vtrw7qiN5iqYJPH7LElcYh/iU4XWhdCy2dZqv1ToMyYlybDylfG/5Vg==
   dependencies:
     foreachasync "^3.0.0"
 
